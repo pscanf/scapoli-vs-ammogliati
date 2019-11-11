@@ -1,0 +1,28 @@
+.c-GamesList {
+    width: 100%;
+    padding: 16px;
+}
+
+.c-GamesList table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.c-GamesList-date-column {
+    width: 20%;
+}
+.c-GamesList-team0-column {
+    width: 20%;
+}
+.c-GamesList-score0-column {
+    width: 5%;
+}
+.c-GamesList-team1-column {
+    width: 30%;
+}
+.c-GamesList-score1-column {
+    width: 5%;
+}
+.c-GamesList-link-column {
+    width: 10%;
+}

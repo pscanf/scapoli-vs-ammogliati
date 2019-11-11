@@ -1,0 +1,35 @@
+{
+  "name": "scapoli-vs-ammogliati",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf artifacts dist tmp",
+    "prettier": "prettier '@(src|content)/**/*.@(js|css|md)'",
+    "prettify": "yarn prettier --write",
+    "lint:prettier": "yarn prettier --list-different",
+    "lint:eslint": "eslint src",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "dev": "react-static start",
+    "build": "yarn clean && react-static build"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "htmr": "^0.8.6",
+    "jdown": "^1.0.3",
+    "lodash": "^4.17.15",
+    "normalize.css": "^8.0.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-static": "^7.2.0",
+    "react-static-plugin-sitemap": "^7.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-react-app": "^5.0.1",
+    "eslint-config-react-tools": "^1.1.7",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "prettier": "^1.19.1"
+  }
+}
