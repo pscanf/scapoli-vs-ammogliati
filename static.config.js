@@ -1,21 +1,28 @@
-import jdown from "jdown";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import { createClient } from "contentful";
 import { omit } from "lodash";
-import { join } from "path";
 
 const websiteRootUrl = new URL(
     process.env.WEBSITE_ROOT_URL || "http://localhost:3000"
 );
 
+const contentful = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+});
+
 export default {
     siteRoot: websiteRootUrl.origin,
     basePath: websiteRootUrl.pathname,
     getRoutes: async () => {
-        const content = await jdown(join(__dirname, "/content"));
-        const games = content.games.map(game => ({
-            date: game.date,
-            teams: game.teams,
-            scores: game.scores,
-            comment: game.contents
+        const gameEntries = await contentful.getEntries({
+            content_type: "game"
+        });
+        const games = gameEntries.items.map(item => ({
+            date: item.fields.date,
+            teams: item.fields.teams,
+            scores: item.fields.scores,
+            comment: documentToHtmlString(item.fields.comment)
         }));
         return [
             {

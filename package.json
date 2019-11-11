@@ -12,9 +12,10 @@
     "build": "yarn clean && react-static build"
   },
   "dependencies": {
+    "@contentful/rich-text-html-renderer": "^13.4.0",
     "classnames": "^2.2.6",
+    "contentful": "^7.10.0",
     "htmr": "^0.8.6",
-    "jdown": "^1.0.3",
     "lodash": "^4.17.15",
     "normalize.css": "^8.0.1",
     "react": "^16.9.0",
