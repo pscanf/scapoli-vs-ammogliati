@@ -1,8 +1,10 @@
 import React from "react";
+import { useBasepath } from "react-static";
 
 import "./index.css";
 
 export default function GamesList({ games }) {
+    const basePath = useBasepath();
     return (
         <div className="c-GamesList">
             <h4>{"Ultime partite"}</h4>
@@ -26,7 +28,9 @@ export default function GamesList({ games }) {
                                 {game.scores[1]}
                             </td>
                             <td className="c-GamesList-link-column">
-                                <a href={`/games/${game.date}`}>{"→"}</a>
+                                <a href={`${basePath}/games/${game.date}`}>
+                                    {"→"}
+                                </a>
                             </td>
                         </tr>
                     ))}
