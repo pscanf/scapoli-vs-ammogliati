@@ -17,7 +17,7 @@ export default function Game() {
                 {game.scores[1]}
             </h1>
             <br />
-            {htmr(game.contents)}
+            {htmr(game.comment)}
         </>
     );
 }

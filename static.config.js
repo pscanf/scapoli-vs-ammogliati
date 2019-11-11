@@ -10,13 +10,19 @@ export default {
     siteRoot: websiteRootUrl.origin,
     basePath: websiteRootUrl.pathname,
     getRoutes: async () => {
-        const { games = [] } = await jdown(join(__dirname, "/content"));
+        const content = await jdown(join(__dirname, "/content"));
+        const games = content.games.map(game => ({
+            date: game.date,
+            teams: game.teams,
+            scores: game.scores,
+            comment: game.contents
+        }));
         return [
             {
                 path: "/",
                 template: "src/pages/Home/index",
                 getData: () => ({
-                    games: games.map(game => omit(game, "contents"))
+                    games: games.map(game => omit(game, "comment"))
                 })
             },
             {
