@@ -28,7 +28,7 @@ export default function GamesList({ games }) {
                                 {game.scores[1]}
                             </td>
                             <td className="c-GamesList-link-column">
-                                <a href={`${basePath}/games/${game.date}`}>
+                                <a href={`/${basePath}/games/${game.date}`}>
                                     {"→"}
                                 </a>
                             </td>
