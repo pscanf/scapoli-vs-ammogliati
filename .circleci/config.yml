@@ -36,3 +36,7 @@ jobs:
       - run:
           name: Deploy website bundle
           command: staticdeploy deploy
+
+      - run:
+          name: Purge CDN cache
+          command: yarn purgeCdnCache

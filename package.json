@@ -9,10 +9,12 @@
     "lint:eslint": "eslint src",
     "lint": "yarn lint:eslint && yarn lint:prettier",
     "dev": "react-static start",
-    "build": "yarn clean && react-static build"
+    "build": "yarn clean && react-static build",
+    "purgeCdnCache": "node scripts/purgeCdnCache.js"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^13.4.0",
+    "aws-sdk": "^2.569.0",
     "classnames": "^2.2.6",
     "contentful": "^7.10.0",
     "htmr": "^0.8.6",
