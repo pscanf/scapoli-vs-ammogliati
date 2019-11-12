@@ -14,6 +14,9 @@ module.exports = {
         headers: {
             "**/*": {
                 "Cache-Control": "public, max-age=86400"
+            },
+            "**/*.(js|css)": {
+                "Cache-Control": "public, max-age=31536000"
             }
         }
     },
