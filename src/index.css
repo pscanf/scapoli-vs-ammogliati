@@ -17,7 +17,7 @@ body {
     padding: 32px;
     display: flex;
     justify-content: center;
-    background-image: url("./background.jpg");
+    background-image: url("./background.webp");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
