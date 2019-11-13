@@ -1,5 +1,5 @@
 @import "~normalize.css";
-@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu&display=swap");
 
 html {
     height: 100%;
@@ -8,7 +8,7 @@ html {
 
 * {
     box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
+    font-family: "Ubuntu", sans-serif;
 }
 
 body {
