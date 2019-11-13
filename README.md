@@ -7,6 +7,6 @@ facendo uso dei seguenti strumenti:
 
 - **static site generator**:
   [React Static](https://github.com/react-static/react-static)
-- **headless CMS**: [Contentful](https://www.contentful.com/)
+- **headless CMS**: file markdown in questa repository
 - **server di continuous integration**: [Circle CI](https://circleci.com/)
 - **piattaforma di deploy**: [StaticDeploy](https://staticdeploy.io/)
