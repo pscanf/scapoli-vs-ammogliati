@@ -6,7 +6,7 @@ import GamesList from "../../components/GamesList";
 export default function Home() {
     const { games } = useRouteData();
     return (
-        <>
+        <div className="p-Home">
             <Head>
                 <title>{"Scapoli vs Ammogliati"}</title>
                 <meta
@@ -14,7 +14,10 @@ export default function Home() {
                     content="Vedi i risultati delle partite di calcetto"
                 ></meta>
             </Head>
+            <h1>
+                <em>{"“Ho fatto gol! Ho fatto gol!”"}</em>
+            </h1>
             <GamesList games={games} />
-        </>
+        </div>
     );
 }

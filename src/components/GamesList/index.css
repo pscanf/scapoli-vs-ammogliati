@@ -8,6 +8,11 @@
     table-layout: fixed;
 }
 
+.c-GamesList tr {
+    height: 42px;
+    line-height: 42px;
+}
+
 .c-GamesList-date-column {
     width: 20%;
 }

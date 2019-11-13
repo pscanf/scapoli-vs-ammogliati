@@ -1,6 +1,7 @@
 import React from "react";
 import { useBasepath } from "react-static";
 
+import withLeadingSlash from "../../common/withLeadingSlash";
 import "./index.css";
 
 export default function GamesList({ games }) {
@@ -28,7 +29,11 @@ export default function GamesList({ games }) {
                                 {game.scores[1]}
                             </td>
                             <td className="c-GamesList-link-column">
-                                <a href={`/${basePath}/games/${game.date}`}>
+                                <a
+                                    href={withLeadingSlash(
+                                        `${basePath}/games/${game.date}`
+                                    )}
+                                >
                                     {"→"}
                                 </a>
                             </td>

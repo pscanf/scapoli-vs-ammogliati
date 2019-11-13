@@ -2,24 +2,33 @@ import htmr from "htmr";
 import React from "react";
 import { Head, useRouteData } from "react-static";
 
+import "./index.css";
+
 export default function Game() {
     const { game } = useRouteData();
-    const teams = `${game.teams[0]} vs ${game.teams[1]}`;
-    const scores = `${game.scores[0]} - ${game.scores[1]}`;
     return (
-        <>
+        <div className="p-Game">
             <Head>
-                <title>{`${game.date} - ${teams}`}</title>
+                <title>{`${game.date} - ${game.teams[0]} vs ${game.teams[1]}`}</title>
                 <meta
                     name="description"
-                    content={`Risultato della partita ${teams} del ${game.date}`}
-                ></meta>
+                    content={`Risultato della partita ${game.teams[0]} vs ${game.teams[1]} del ${game.date}`}
+                />
             </Head>
-            <h1>{teams}</h1>
-            <h2>{scores}</h2>
-            <h3>{game.date}</h3>
-            <br />
-            {htmr(game.comment)}
-        </>
+            <h1>
+                <span>{game.teams[0]}</span>
+                {" vs "}
+                <span>{game.teams[1]}</span>
+            </h1>
+            <h1>
+                <span>{game.scores[0]}</span>
+                {" - "}
+                <span>{game.scores[1]}</span>
+            </h1>
+            <h4>
+                <em>{game.date}</em>
+            </h4>
+            <div className="p-Game-comment">{htmr(game.comment)}</div>
+        </div>
     );
 }

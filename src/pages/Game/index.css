@@ -1,0 +1,23 @@
+.p-Game h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.p-Game h1 span {
+    display: inline-block;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.p-Game h1 span:first-child {
+    text-align: right;
+}
+.p-Game h1 span:last-child {
+    text-align: left;
+}
+
+.p-Game-comment {
+    text-align: justify;
+    line-height: 2em;
+}
