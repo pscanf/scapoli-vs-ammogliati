@@ -33,8 +33,8 @@ Poi si può:
 - fare partire il server di sviluppo con `yarn dev`
 - buildare il sito con `yarn build`
 
-> **Nota:** per caricare i contenuti da Contenful, vanno impostate le seguenti
-> variabili d'ambiente:
+> **Nota:** per caricare i contenuti da Contenful (e non dai file markdown nel
+> repo git), vanno impostate le seguenti variabili d'ambiente:
 >
 > - `CONTENTFUL_SPACE_ID`
 > - `CONTENTFUL_ACCESS_TOKEN`
