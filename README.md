@@ -15,6 +15,10 @@ facendo uso dei seguenti strumenti:
 - **server di continuous integration**: [Circle CI](https://circleci.com/)
 - **piattaforma di deploy**: [StaticDeploy](https://staticdeploy.io/)
 
+### Report Lighthouse del sito
+
+![report lighthouse](./lighthouseReport.png)
+
 ## Come modificare il sito
 
 Per il setup dell'ambiente di sviluppo:
@@ -34,10 +38,6 @@ Poi si può:
 >
 > - `CONTENTFUL_SPACE_ID`
 > - `CONTENTFUL_ACCESS_TOKEN`
-
-## Report Lighthouse
-
-![report lighthouse](./lighthouseReport.png)
 
 ## Link utili
 
