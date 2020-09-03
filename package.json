@@ -17,7 +17,7 @@
     "aws-sdk": "^2.569.0",
     "classnames": "^2.2.6",
     "contentful": "^7.10.0",
-    "htmr": "^0.8.6",
+    "htmr": "^0.8.7",
     "jdown": "^1.0.3",
     "lodash": "^4.17.15",
     "normalize.css": "^8.0.1",
